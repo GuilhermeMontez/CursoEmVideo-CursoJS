@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigrantes</title>
+</head>
+<body>
+    <h1>Sistema do preconceito</h1>
+    Nacionalidade: <input type="text" name="nac" id="nac">
+    <input type="button" value="Julgar" onclick="nacional()">
+    <div id="res">
+
+    </div>
+    <script>
+        function nacional() {
+            var nac = window.document.querySelector('input#nac');
+            var res = window.document.querySelector('div#res');
+            var Nacionalidade = String(nac.value);
+            res.innerHTML = `<p>Sua nacionalidade é <strong> ${Nacionalidade}.</strong></p>`;
+        
+        if (Nacionalidade == "Brasileiro") {
+                res.innerHTML +=`<p>Você é Brasileiro!`
+            } else {
+                res.innerHTML += `<p>Você Não é Brasileiro!`
+            }
+            res.innerHTML += `<p>Beba água.</p>`
+        }
+    </script>
+</body>
+</html>
